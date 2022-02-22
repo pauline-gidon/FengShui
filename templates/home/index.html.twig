@@ -1,0 +1,74 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Accueil{% endblock %}
+
+{% block body %}
+    <section class="home">
+        <div class="bandeauPage">
+            <img src="{{ asset('img/acceuil.jpg')}}" alt="l'art du feng shui traditionel">
+            <div class="filterBandeau">
+                <h1 class="tc">Le Feng Shui<br>Traditionel</h1>
+            </div>
+        </div>
+        {# containner flex #}
+        <div class="fc jc-sb wrap">
+            <div class="colGauche">
+                <h2>LA PRATIQUE DU FENG SHUI AUTHENTIQUE</h2>
+
+                <div class="savoir">
+                    <h3>Une affaire de compétences avérées.</h3>
+                    <figure>
+                        <img src="{{ asset('img/nature.jpg')}}" alt="Piscine intérieure Villa Grande" class="full-img">
+                        <figcaption>La nature est notre force vitale</figcaption>
+                    </figure>
+                    <p>La vie humaine est trop précieuse pour jouer avec. Les forces de la Nature sont subtiles, puissantes et ne se laissent pas dompter facilement.</p>
+                    <p>Des conseils de Feng Shui ne peuvent être prodigués que par un Praticien confirmé, formé et accrédité par un vrai Maître, détenteur du savoir authentique.</p>
+                    <h4>Le Feng Shui est une question de choix :</h4>
+                    <ul>
+                        <li>Le choix d’aller là où les conditions de vie seront meilleures pour nous.</li>
+                        <li>Le choix de suivre ou pas les recommandations du praticien.</li>
+                    </ul>
+                    
+                    <h4>Le Feng Shui est une question de priorité :</h4>
+                    <p>Le Feng Shui est une discipline extraordinaire qui peut radicalement transformer votre vie. Un Trésor, un Savoir hors du commun, au service des personnes, a-t-il un prix ? Tout est question de priorité...
+                    </p>
+                </div>
+
+                <div class="savoir">
+                    <h3>Le thème de mon Être Intérieur ou BA ZI</h3>
+                    <figure>
+                        <img src="{{ asset('img/etre-interieur.jpg')}}" alt="Piscine intérieure Villa Grande" class="full-img">
+                        <figcaption>La Chance Du Ciel</figcaption>
+                    </figure>
+                    <h4>« Quel chemin vers mon bonheur ? »</h4>
+                    <p>Le thème BA ZI ou Chemin de Vie permet de mieux comprendre et connaître la personne, d’identifier ses préférences quant à son activité professionnelle, ses loisirs, quant aux autres personnes…</p>
+                    <p>Il permet de répondre aux questions suivantes :</p>
+                    <ul>
+                        <li>Qui suis-je ?</li>
+                        <li>Quelle est ma nature, ma personnalité ?</li>
+                        <li>Quelles sont mes aspirations ?</li>
+                        <li>Quel type de relation j’entretiens avec tous les aspects de ma vie ?</li>
+                        <li>Quel est le but de mon existence ?</li>
+                        <li>Vers quelles voies me diriger pour m’épanouir ?</li>
+                        <li>Qu’est ce qui me rend heureux ? </li>
+                    </ul>
+                    
+                
+                </div>
+            
+            </div> {# // fin div col gauche #}
+            
+            <div class="colDroite">
+                <h2>La transmission d'un précieux Héritage Culturel.</h2>
+                <img src="{{ asset('img/ancestrale.jpg')}}" alt="Cabinet Michel Architecture" class="full-img">
+                <p>Grâce au Feng Shui, l’homme peut trouver sa juste place dans son environnement et améliorer ses conditions de vie.Par ses effets, il stimule chance, bonheur, amour, santé, prospérité…</p>
+                <p>Ses principes consistent à harmoniser les personnes, les lieux de vie et les forces de la nature.</p>
+            
+            </div>
+
+
+        
+        </div>
+
+    </section>
+{% endblock %}
