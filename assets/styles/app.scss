@@ -85,6 +85,9 @@ header{
 
     }
 }
+//----------------------------
+// page accueil
+//----------------------------
 .home {
     
     .colGauche {
@@ -160,6 +163,9 @@ header{
         }
     }
 }
+//----------------------------
+// page feng shui
+//----------------------------
 .fengshui {
     .container {
         margin-top: 100px;
@@ -177,6 +183,7 @@ header{
             font-size: 40px;
 
         }
+
         .univers {
             margin: 80px 15px 15px;
             position: relative;
@@ -203,8 +210,7 @@ header{
             margin-bottom: 20px;
         }
         article {
-            width: 48%;
-            margin: 10px;
+            margin: 80px 0;
             h1 {
                 font-size: 25px;
                 font-family: 'Roboto Slab', serif;
@@ -216,11 +222,146 @@ header{
             ul {
                 padding-left: 12px;
             }
-            div {
-                border-left: solid 3px #616a7b;
-                padding-left: 20px;
-
+            .col1, .col2 {
+                width: 49%;
+            }
+            .col2 {
+                .borderleft {
+                    border-left: solid 3px #616a7b;
+                    padding-left: 20px;
+    
+                }
+            }
+            .col1.ancestraleimg {
+                background-image: url('./../../public/img/ancestrale.jpg');
+                background-position: center;
+                background-repeat: no-repeat;
+                background-size: cover;
+            }
+            .col1.maitrefengshui {
+                background-image: url('./../../public/img/maitre-feng-shui.jpg');
+                background-position: center;
+                background-repeat: no-repeat;
+                background-size: cover;
+            }
+            .col1.luopan {
+                background-image: url('./../../public/img/luopan.jpg');
+                background-position: center;
+                background-repeat: no-repeat;
+                background-size: cover;
             }
         }
     }
+}
+//----------------------------
+// page offre
+//----------------------------
+.offre {
+    h2 {
+        margin: 40px 0;
+        width: 100%;
+    }
+    .col1, .col2 {
+        border-left: solid 3px #616a7b;
+        padding: 0 20px;
+        h3 {
+            color: #616a7b;
+            font-size: 25px;
+            font-family: 'Roboto Slab', serif;
+            margin-bottom: 20px;
+        }
+    }
+    .col1 {
+        width: 35%;
+    }
+    .col2 {
+        width: 50%;
+    }
+    .imgstrategie {
+        width: 50%;
+        margin: 0 auto;
+    }
+    .analyse {
+        position: relative;
+        color: #003D70;
+    }
+    .analyse:before, .analyse:after {
+        content:'';
+        position: absolute;
+        top: 50%;
+        width: 28%;
+        height: 2px;
+        background-color: #003D70;
+    }
+    .analyse:before {
+        left: 0;
+    }
+    .analyse:after {
+        right: 0;
+    }
+    article {
+        margin: 80px 0;
+        .articleCol1, .articleCol2 {
+            width: 49%;
+        }
+        ul {
+            padding-left: 20px;
+        }
+        h1 {
+            color: #FFF;
+            background-color: #003D70;
+            padding: 10px;
+            margin-bottom: 20px;
+            font-weight: normal;
+            font-size: 22px;
+        }
+        .articleCol2.imgTemporel {
+            background-image: url('./../../public/img/imgTemporel.jpg');
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+        .articleCol2.imgIndividuel {
+            background-image: url('./../../public/img/imgIndividuel.jpg');
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+        .articleCol2.imgInterne {
+            background-image: url('./../../public/img/imgInterne.jpg');
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+        .articleCol2.imgExterne {
+            background-image: url('./../../public/img/imgExterne.jpg');
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+    }
+    .resultat {
+        h3 {
+            color: #003D70;
+            font-size: 25px;
+            margin-bottom: 18px;
+        }
+        p {
+            margin-bottom: 12px;
+        }
+    }
+    .mesOffres {
+        margin: 80px 0;
+        div {
+            width: 30%;
+            min-height: 500px;
+            background-color: #003D70;
+            color: #FFF;
+            margin: 40px 0;
+            p {
+                font-size: 50px;
+            }
+        }
+    }
+
 }
