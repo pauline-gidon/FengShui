@@ -1,0 +1,13 @@
+
+{{ form_start(form) }}
+            <div class="zup">{{ form_row(form.prenom) }}</div>
+            <div class="zup">{{ form_row(form.nom) }}</div>
+            <div class="zup">{{ form_row(form.mail) }}</div>
+            <div class="zup">{{ form_row(form.nbPersonne) }}</div>
+            <div class="zup">{{ form_row(form.surfaceLogement) }}</div>
+            <div class="zup">{{ form_row(form.typeLogement) }}</div>
+    <div class="">
+        <button class="btn">{{ button_label|default('Envoyer') }}</button>
+    </div>
+{{ form_end(form) }}
+

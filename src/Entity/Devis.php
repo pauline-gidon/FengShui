@@ -2,8 +2,9 @@
 
 namespace App\Entity;
 
-use App\Repository\DevisRepository;
+use DateTimeInterface;
 use Doctrine\ORM\Mapping as ORM;
+use App\Repository\DevisRepository;
 
 /**
  * @ORM\Entity(repositoryClass=DevisRepository::class)
@@ -45,7 +46,17 @@ class Devis
     /**
      * @ORM\Column(type="datetime")
      */
-    private $date;
+    private \DateTimeInterface $date;
+
+    /**
+     * @ORM\Column(type="string", length=255)
+     */
+    private $typeLogement;
+
+    /**
+     * @ORM\Column(type="boolean")
+     */
+    private $traiter;
 
     public function getId(): ?int
     {
@@ -120,6 +131,30 @@ class Devis
     public function setDate(\DateTimeInterface $date): self
     {
         $this->date = $date;
+
+        return $this;
+    }
+
+    public function getTypeLogement(): ?string
+    {
+        return $this->typeLogement;
+    }
+
+    public function setTypeLogement(string $typeLogement): self
+    {
+        $this->typeLogement = $typeLogement;
+
+        return $this;
+    }
+
+    public function getTraiter(): ?bool
+    {
+        return $this->traiter;
+    }
+
+    public function setTraiter(bool $traiter): self
+    {
+        $this->traiter = $traiter;
 
         return $this;
     }

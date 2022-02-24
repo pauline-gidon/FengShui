@@ -1,0 +1,20 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Demande de Devis{% endblock %}
+
+{% block body %}
+{# <div class="bandeauPage">
+            <img src="{{ asset('img/fengshui.jpg')}}" alt="l'art du feng shui traditionel" class="full-img">
+            <div class="filterBandeau">
+                <h1 class="tc">L'authentique<br>FENG SHUI</h1>
+            </div>
+</div> #}
+<div class="formDevis">
+<div class="filterBandeau">
+    <h1 class="tc">Devis<br>FENG SHUI</h1>
+</div>
+
+    {{ include('devis/_form.html.twig') }}
+</div>
+
+{% endblock %}
