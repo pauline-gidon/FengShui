@@ -4,9 +4,11 @@ namespace App\Controller;
 
 use App\Entity\Devis;
 use App\Form\DevisType;
+use Symfony\Component\Mime\Email;
 use App\Repository\DevisRepository;
 use Doctrine\ORM\EntityManagerInterface;
 use Symfony\Component\HttpFoundation\Request;
+use Symfony\Component\Mailer\MailerInterface;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
 use Symfony\Component\Validator\Constraints\Date;
@@ -24,7 +26,7 @@ class DevisController extends AbstractController
     }
 
     #[Route('/demander', name: 'devis_new', methods: ['GET', 'POST'])]
-    public function new(Request $request, EntityManagerInterface $entityManager): Response
+    public function new(Request $request, EntityManagerInterface $entityManager,MailerInterface $mailer ): Response
     {
         $devi = new Devis();
         $form = $this->createForm(DevisType::class, $devi);
@@ -36,8 +38,18 @@ class DevisController extends AbstractController
             $devi->setTraiter(0);
             $entityManager->persist($devi);
             $entityManager->flush();
+         
             // faire l'envoie d'un mail a l'admin pour qu'il sache qu'une demande de devis a été faite
-            return $this->redirectToRoute('devis_index', [], Response::HTTP_SEE_OTHER);
+            $message = (new Email())
+            ->from('devis@fengshui-consult.com')
+            ->to('pauline.gidon@gmail.com')
+            ->subject('Demande de devis')
+            ->text('<p>Vous avez reçu une demande de devis, vous pouvez aller le consulter dans votre administration de site feng shui <a href="https://localhost:8000/login">Cliquer ici</a></p>');
+            $mailer->send($message);
+
+            $this->addFlash('success', 'Votre demande de devis a bien été envoyé !');
+
+            return $this->redirectToRoute('devis_new', [], Response::HTTP_SEE_OTHER);
         }
 
         return $this->renderForm('devis/new.html.twig', [
