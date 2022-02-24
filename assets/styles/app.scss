@@ -28,9 +28,11 @@ header{
                     text-align: center;
                     padding: 16px 0;
                     font-family: 'Redressed', cursive;
+                    font-size: 23px;
                 }
                 a:hover{
-                    background-color: #5381a7;
+                    // background-color: #5381a7;
+                    background-color: #23a6d5;
                 
                 }
             }
@@ -584,3 +586,29 @@ header{
     background-size: 0% 0%, 0% 0%,  0% 0%,  0% 0%,  0% 0%,  0% 0%;
     }
   }
+//----------------------------
+//  Footer
+//----------------------------
+footer {
+    background-color: #003D70;
+    p {
+
+        a, span {
+            text-decoration: none;
+            color: #FFF;
+            display: block;
+            padding: 16px 0;
+            font-family: 'Redressed', cursive;
+            font-size: 23px;
+            &:hover {
+                color: #23a6d5;
+            }
+        }
+        span {
+            margin: 0 6px;
+        }
+    }
+      
+        
+    
+}
